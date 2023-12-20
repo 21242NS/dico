@@ -1,0 +1,32 @@
+h1 {text-align: center;}
+section{display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.titre {
+    text-align: center;
+    color: blue;
+}
+a{
+    color: cyan;
+}
+/* Sélectionnez le bouton par son type, par exemple, si c'est un bouton de type "button" */
+button {
+    /* Définissez la nouvelle couleur de fond */
+    background-color: red; /* Vous pouvez remplacer cette valeur par la couleur de votre choix */
+    
+    /* Ajoutez d'autres styles si nécessaire */
+    color: black; /* Couleur du texte */
+    border: 1px solid black; /* Bordure avec une couleur assortie */
+    padding: 10px 20px; /* Rembourrage pour le bouton */
+    cursor: pointer; /* Curseur de la souris lorsqu'il survole le bouton */
+    border-radius: 5px; /* Coins arrondis */
+  }
+  
+  /* Style supplémentaire pour le survol du bouton */
+  button:hover {
+    background-color: rgb(254, 157, 157); /* Nouvelle couleur de fond au survol */
+  }
+  

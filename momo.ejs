@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>appercu dico</title>
+    <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Tables et base de donnée</h1>
+    <h2>Télé desiré</h2>
+    <table>
+        <thead>
+            <th>Mot</th>
+            <th>Traduction</th>
+            <th>pourcentage</th>
+            <th>supprimer</th>
+        </thead>
+        <tBody>
+            <% for(var i=0;i< d.length;i+=1) {%>
+                <tr>
+                        <td>
+                            <%= d[i].mot %>
+                        </td>
+                        <td>
+                            <%= d[i].traduction %>
+                        </td>
+                        <td>
+                            <%= d[i].pourcentage %>
+                        </td>
+                        <td>
+                            <a href="/dico/delete?effacer=<%=d[i].id %>">delete</a>
+                        </td>
+                </tr>
+                <%}%>
+        </tBody>
+    </table>
+    
+    <h2> Ajout de mot</h2>
+        <form action="/dico/ajout" method="post">
+            <input type="text" id="mot" name="mot" placeholder="Nouveau mot" required><br>
+            <input type="text" id="traduction" name="traduction" placeholder="la traduction" required><br>
+            <button type="submit" id="button">Ajouter</button>
+        </form>
+    <h2>Retour au test</h2>
+    <p>
+        <a href="/">retour vers le Test</a>
+    </p>
+        
+</body>
+
+</html>

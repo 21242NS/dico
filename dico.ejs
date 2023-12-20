@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Test dico</title>
+    <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>test dico</h1>
+            <% %> 
+
+           
+            <form action="/test" method="post">
+                <p id ="annonce"><%= annonce %></p>
+                <p>Comment tu dirais le Mot</p><p> <%=motte%></p><br>
+                <input type="text" id ="trad" name="trad" placeholder="Donner la traduction" required><br>
+                <input type="hidden" id="mot" name="mot" value="<%=motte%>" >
+                <button type="submit" id="soummetre">soummetre ma réponse</button>
+
+            </form>
+    <h2>Voir dictionnaire</h2>
+        <p id="vu">
+            <a href="/dico">voir la liste de vocabulaire</a>
+        </p>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Todo</title>
+        <link href="/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Todo</h1>
+        <h2>Liste des choses a faire</h2>
+        <ul action="/remove" method="get">
+            <% for(var i =0;i<tasks.length;i+=1) {%>
+                <li><%= tasks[i].task%> <a href="/remove?delete=<%=tasks[i].task%>" id="delete">effacer</a> </li>
+                
+            <%}%>
+            
+
+        </ul>
+        <h2>Ajout de tache</h2>
+        <form action="/ajout" method="post">
+            <p id ="reussi"><%= reussi%></p>
+            <input type="text" id="New_task" name="New_task"  placeholder="Nouvelle tache" required>
+            <button type="submit" id="button">Ajouter</button>
+        </form>
+    </body>
+
+
+
+
+</html>
